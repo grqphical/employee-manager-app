@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Employee</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </head>
+    <body>
+        <div class="columns">
+            <div class="column">
+
+            </div>
+            <div class="column">
+                <div class="box">
+                    <form action="/remove-employee" method="POST">
+                        <div class="content">
+                            <h1>Remove Employee: </h1>
+                            <div class="field">
+                                <label class="label">Employee: </label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select name="employee">
+                                            {%for employee in employees%}
+                                                <option>{{ "{0} {1}".format(employee[0], employee[1]) }}</option>
+                                            {%endfor%}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="button is-primary" type="submit" value="Submit">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="column">
+                
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% block main %}
+<html>
+    <head>
+        <title>Employee Interface</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
+    </head>
+    <body>
+        <div class="columns">
+            <div class="column is-1">
+
+            </div>
+            <div class="column is-10">
+                <div class="content">
+                    <h1>Employee Database:</h1>
+                </div>
+                <div class="table-container">
+                    <table class="table is-fullwidth has-background-light" id="data">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Salary</th>
+                                <th>Email</th>
+                                <th>Modify</th>
+                            </tr>
+                            <tbody>
+                                {%for employee in employees%}
+                                    <tr>
+                                        <td>{{ employee[0] }}</td>
+                                        <td>{{ employee[1] }}</td>
+                                        <td>{{ '${:,}'.format(employee[2]) }}</td>
+                                        <td>{{ employee[3] }}</td>
+                                        <td><form action="{{ url_for('modify_employee_view', employee=employee)}}" method="GET"><input type="submit" class="button" value="Modify Salary"></form></td>
+                                    </tr>
+                                {%endfor%}
+                            </tbody>
+                            
+                        </thead>
+                    </table>
+                </div>
+                <div>
+                    <form method="GET" action="{{ url_for('add_employee_view') }}" style="display: inline-block;">
+                        <input type="submit" class="button" value="Add Employee">
+                    </form>
+                    <form method="GET" action="{{ url_for('remove_employee_view') }}" style="display: inline-block;">
+                        <input type="submit" class="button" value="Remove Employee">
+                    </form>
+                </div>
+            </div>
+            <div class="column is-1">
+
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bulma.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#data').DataTable()
+            });
+        </script>
+    </body>
+</html>
+{% endblock %}
