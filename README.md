@@ -1,9 +1,11 @@
-# Employee Database Interface
+# SQlite Database Interface
 
 This is a project I made to test out *flask* and learn the basics of *sqlite3*
 
 ## Usage
- TODO
+1. Clone the repo
+2. Run ```pip install -e .```
+3. Run ```dbapp``` in the terminal
 
 ## Included Database
 
