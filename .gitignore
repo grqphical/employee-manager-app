@@ -3,3 +3,4 @@ __pycache__
 .pytest-cache
 dbapp.egg-info
 venv
+build
