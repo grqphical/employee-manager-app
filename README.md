@@ -1,5 +1,6 @@
 # SQlite Database Interface
-![tests](https://github.com/grqphical07/SQLite-Database-Interface/actions/workflows/python_test.yaml/badge.svg)
+![tests](https://github.com/grqphical07/SQLite-Database-Interface/actions/workflows/linux_test.yaml/badge.svg)
+![tests](https://github.com/grqphical07/SQLite-Database-Interface/actions/workflows/win_test.yaml/badge.svg)
 
 This is a project I made to test out *flask* and learn the basics of *sqlite3*
 
