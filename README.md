@@ -1,5 +1,5 @@
-# SQlite Database Interface
-![tests](https://github.com/grqphical07/SQLite-Database-Interface/actions/workflows/linux_test.yaml/badge.svg)
+# Employee Manager App
+![tests](https://github.com/grqphical07/employee-manager-app/actions/workflows/linux_test.yaml/badge.svg)
 
 This is a project I made to test out *flask* and learn the basics of *sqlite3*
 
